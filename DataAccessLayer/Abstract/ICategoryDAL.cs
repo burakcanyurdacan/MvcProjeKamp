@@ -12,5 +12,7 @@ namespace DataAccessLayer.Abstract
         List<Category> List();
 
         void Insert(Category c);
+        void Update(Category c);
+        void Delete(Category c);
     }
 }
