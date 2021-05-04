@@ -19,6 +19,11 @@ namespace BusinessLogicLayer.Concrete
             _categoryDal = categoryDal;
         }
 
+        public void AddCategory(Category category)
+        {
+            _categoryDal.Insert(category);
+        }
+
         public List<Category> GetList()
         {
             return _categoryDal.List();
