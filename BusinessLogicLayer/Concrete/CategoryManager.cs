@@ -24,6 +24,11 @@ namespace BusinessLogicLayer.Concrete
             _categoryDal.Insert(category);
         }
 
+        public void UpdateCategory(Category category)
+        {
+            _categoryDal.Update(category);
+        }
+
         public Category GetByID(int id)
         {
             return _categoryDal.GetByID(x => x.CategoryId == id);
@@ -32,6 +37,11 @@ namespace BusinessLogicLayer.Concrete
         public List<Category> GetList()
         {
             return _categoryDal.List();
+        }
+
+        public void DeleteCategory(Category category)
+        {
+            _categoryDal.Delete(category);
         }
     }
 }

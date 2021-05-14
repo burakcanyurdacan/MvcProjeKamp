@@ -47,14 +47,22 @@ namespace MvcProjeKamp.Controllers
 
         public ActionResult DeleteCategory(int id)
         {
-            var categoryId = cm.GetByID(id);
-            return View();
+            var categoryVal = cm.GetByID(id);
+            cm.DeleteCategory(categoryVal);
+            return RedirectToAction("Index");
         }
 
         public ActionResult UpdateCategory(int id)
         {
             var category = cm.GetByID(id);
             return View(category);
+        }
+
+        [HttpPost]
+        public ActionResult UpdateCategory(Category p)
+        {
+            cm.UpdateCategory(p);
+            return RedirectToAction("Index");
         }
     }
 }
