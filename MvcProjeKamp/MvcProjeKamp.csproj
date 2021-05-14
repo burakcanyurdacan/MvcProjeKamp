@@ -1982,8 +1982,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="HomeworkScreenshots\Database_Tables.png" />
-    <Content Include="HomeworkScreenshots\Statistics.png" />
+    <Content Include="Views\Statistics\HomeworkScreenshots\Database_Tables.png" />
+    <Content Include="Views\Statistics\HomeworkScreenshots\Statistics.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="AdminLTE-3.0.4\.babelrc" />
