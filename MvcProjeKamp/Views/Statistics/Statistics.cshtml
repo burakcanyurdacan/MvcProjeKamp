@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "Statistics";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>İstatistikler</h2>
+<hr />
+<div class="row ml-0">
+    <div class="card text-white bg-primary mr-3">
+        <div class="card-header">Toplam Kategori Sayısı</div>
+        <div class="card-body">
+            <h3 class="text-center">@ViewBag.ToplamKategoriSayisi</h3>
+        </div>
+    </div>
+    <div class="card text-white bg-info mr-3">
+        <div class="card-header">Aktif Kategori Sayısı</div>
+        <div class="card-body">
+            <h3 class="text-center">@ViewBag.AktifKategoriler</h3>
+        </div>
+    </div>
+    <div class="card text-white bg-secondary mr-3">
+        <div class="card-header">Pasif Kategori Sayısı</div>
+        <div class="card-body">
+            <h3 class="text-center">@ViewBag.PasifKategoriler</h3>
+        </div>
+    </div>
+    <div class="card text-white bg-dark mr-3">
+        <div class="card-header">Aradaki Sayısal Fark</div>
+        <div class="card-body">
+            <h3 class="text-center">@(Convert.ToInt32(ViewBag.AktifKategoriler) -Convert.ToInt32(ViewBag.PasifKategoriler))</h3>
+        </div>
+    </div>
+</div>
+<div class="row ml-0">
+    <div class="card text-white bg-warning mr-3">
+        <div class="card-header"> <u><b>Yazılım</b></u> Kategorili Başlık Sayısı</div>
+        <div class="card-body">
+            <h3 class="text-center">@ViewBag.YazilimBaslik</h3>
+        </div>
+    </div>
+    <div class="card text-white bg-danger mr-3">
+        <div class="card-header">Adında "A" Geçen Yazar Sayısı</div>
+        <div class="card-body">
+            <h3 class="text-center">@ViewBag.YazarSayisi</h3>
+        </div>
+    </div>
+    <div class="card text-white bg-success mr-3">
+        <div class="card-header">En Fazla Başlığa Sahip Kategori</div>
+        <div class="card-body">
+            <h3 class="text-center">@ViewBag.MaksimumBaslik</h3>
+        </div>
+    </div>
+</div>
