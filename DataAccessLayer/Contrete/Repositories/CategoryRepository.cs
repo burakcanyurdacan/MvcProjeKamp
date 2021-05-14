@@ -21,6 +21,11 @@ namespace DataAccessLayer.Contrete.Repositories
             ct.SaveChanges();
         }
 
+        public Category GetByID(Expression<Func<Category, bool>> filter)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Insert(Category c)
         {
             _object.Add(c);

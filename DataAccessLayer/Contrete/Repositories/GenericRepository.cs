@@ -25,6 +25,11 @@ namespace DataAccessLayer.Contrete.Repositories
             c.SaveChanges();
         }
 
+        public T GetByID(Expression<Func<T, bool>> filter)
+        {
+            return _object.SingleOrDefault(filter);
+        }
+
         public void Insert(T p)
         {
             _object.Add(p);
