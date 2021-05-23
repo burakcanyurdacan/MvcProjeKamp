@@ -1,0 +1,29 @@
+﻿@model EntityLayer.Concrete.Heading
+
+@{
+    ViewBag.Title = "AddHeading";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Başlık Ekle</h2>
+<hr />
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.Label("Başlık Adı")
+        @Html.TextBoxFor(x => x.HeadingName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.HeadingName)
+        <br />
+        @Html.Label("Kategori")
+        @*@Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.clv,"Seçiniz...", new { @class = "form-control custom-select" })*@
+        @Html.DropDownListFor(x => x.CategoryId, (SelectList)ViewBag.clv, "Seçiniz...", new { @class = "form-control custom-select" })
+        <br /><br />
+        @Html.Label("Yazar")
+        @Html.DropDownListFor(x => x.WriterId, (List<SelectListItem>)ViewBag.wrv, "Seçiniz...", new { @class = "form-control custom-select" })
+        @*@Html.TextBoxFor(x => x.WriterId, new { @class = "form-control" })*@
+        @*@Html.ValidationMessageFor(x => x.WriterId)*@
+        <br /><br />
+        <input type="submit" value="Başlık Ekle" class="btn btn-info" />
+        <a href="/Heading/Index" class="btn btn-secondary">Geri Dön</a>
+    </div>
+}
