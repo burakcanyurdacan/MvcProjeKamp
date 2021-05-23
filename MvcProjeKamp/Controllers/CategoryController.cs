@@ -22,7 +22,7 @@ namespace MvcProjeKamp.Controllers
 
         public ActionResult GetCategoryList()
         {
-            var categoryValues = cm.GetList();
+            var categoryValues = cm.GetCategoryList();
             return View(categoryValues);
         }
 

@@ -16,7 +16,7 @@ namespace MvcProjeKamp.Controllers
         CategoryManager cm = new CategoryManager(new EfCategoryDal());
         public ActionResult Index()
         {
-            var categoryValues = cm.GetList();
+            var categoryValues = cm.GetCategoryList();
             return View(categoryValues);
         }
 
@@ -47,14 +47,14 @@ namespace MvcProjeKamp.Controllers
 
         public ActionResult DeleteCategory(int id)
         {
-            var categoryVal = cm.GetByID(id);
+            var categoryVal = cm.GetByCategoryID(id);
             cm.DeleteCategory(categoryVal);
             return RedirectToAction("Index");
         }
 
         public ActionResult UpdateCategory(int id)
         {
-            var category = cm.GetByID(id);
+            var category = cm.GetByCategoryID(id);
             return View(category);
         }
 

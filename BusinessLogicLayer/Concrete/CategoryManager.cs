@@ -29,12 +29,12 @@ namespace BusinessLogicLayer.Concrete
             _categoryDal.Update(category);
         }
 
-        public Category GetByID(int id)
+        public Category GetByCategoryID(int id)
         {
             return _categoryDal.GetByID(x => x.CategoryId == id);
         }
 
-        public List<Category> GetList()
+        public List<Category> GetCategoryList()
         {
             return _categoryDal.List();
         }
