@@ -13,6 +13,6 @@ namespace BusinessLogicLayer.Abstract
         void AddHeading(Heading p);
         void DeleteHeading(Heading p);
         void UpdateHeading(Heading p);
-        Writer GetByHeadingID(int id);
+        Heading GetByHeadingID(int id);
     }
 }
