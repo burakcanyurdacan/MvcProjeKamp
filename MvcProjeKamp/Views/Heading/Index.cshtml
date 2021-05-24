@@ -48,11 +48,8 @@
                                 </small>
                             </td>
                             <td>
-                                <ul class="list-inline">
-                                    <li class="list-inline-item">
-                                        <img alt="Avatar" class="table-avatar" src="~/AdminLTE-3.0.4/dist/img/avatar.png">
-                                    </li>
-                                </ul>
+                                <img alt="Avatar" class="img-circle img-md" src="@item.Writer.WriterImage">&nbsp;&nbsp;
+                                <a>@(item.Writer.WriterName+" "+item.Writer.WriterSurname)</a>
                             </td>
                             <td class="project-state">
                                 @switch (item.Category.CategoryName)
