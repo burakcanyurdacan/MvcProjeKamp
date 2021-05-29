@@ -373,3 +373,6 @@ FodyWeavers.xsd
 /DataAccessLayer/Migrations/202105241920449_mig_writerStatusAdd.resx
 /DataAccessLayer/Migrations/202105241920449_mig_writerStatusAdd.Designer.cs
 /DataAccessLayer/Migrations/202105241920449_mig_writerStatusAdd.cs
+/DataAccessLayer/Migrations/202105290637356_mig_HeadingName_lengthUp.cs
+/DataAccessLayer/Migrations/202105290637356_mig_HeadingName_lengthUp.Designer.cs
+/DataAccessLayer/Migrations/202105290637356_mig_HeadingName_lengthUp.resx
