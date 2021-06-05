@@ -1,0 +1,17 @@
+﻿@model EntityLayer.Concrete.Heading
+@{
+    ViewBag.Title = "EditHeading";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h4>Başlık Düzenle</h4>
+<hr />
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.Label("Başlık")
+        @Html.TextBoxFor(x => x.HeadingName, new { @class = "form-control disabled" })
+        <br />
+        @Html.DropDownListFor(x => x.CategoryId, (SelectList)ViewBag.testlist, new { @class="form-control custom-select" })
+    </div>
+}

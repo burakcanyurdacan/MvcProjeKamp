@@ -50,5 +50,12 @@ namespace MvcProjeKamp.Controllers
             hm.AddHeading(p);
             return RedirectToAction("Index");
         }
+
+        public ActionResult EditHeading(int id)
+        {
+            ViewBag.testlist = new SelectList(cm.GetCategoryList(), "CategoryId", "CategoryName");
+            var value = hm.GetByHeadingID(id);
+            return View(value);
+        }
     }
 }
