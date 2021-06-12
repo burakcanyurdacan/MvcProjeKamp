@@ -25,14 +25,14 @@ namespace BusinessLogicLayer.Concrete
 
         public void DeleteHeading(Heading p)
         {
-            if (p.HeadingStatus == true)
-            {
-                p.HeadingStatus = false;
-            }
-            else
-            {
-                p.HeadingStatus = true;
-            }
+            //if (p.HeadingStatus == true)
+            //{
+            //    p.HeadingStatus = false;
+            //}
+            //else
+            //{
+            //    p.HeadingStatus = true;
+            //}
             _headingDal.Update(p);
         }
 
