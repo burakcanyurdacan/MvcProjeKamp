@@ -3,7 +3,7 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
-    string color = "";
+    string color = "", btnStatus = "", statusWord = "", btnIcon = "";
 }
 
 <h4>Başlıklar</h4>
@@ -21,13 +21,16 @@
                         <th style="width: 20%">
                             Başlık Adı
                         </th>
-                        <th style="width: 30%">
+                        <th style="width: 25%">
                             Oluşturan Yazar
+                        </th>
+                        <th style="width:5%">
+                            Durum
                         </th>
                         <th style="width: 8%" class="text-center">
                             Kategori
                         </th>
-                        <th style="width: 20%">
+                        <th style="width: 25%">
                         </th>
                     </tr>
                 </thead>
@@ -51,19 +54,36 @@
                                 <img alt="Avatar" class="img-circle img-md" src="@item.Writer.WriterImage">&nbsp;&nbsp;
                                 <a>@(item.Writer.WriterName+" "+item.Writer.WriterSurname)</a>
                             </td>
+                            <td>
+                                @switch (item.HeadingStatus)
+                                {
+                                    case true:
+                                        <span class="badge badge-success">&nbsp;Aktif</span>
+                                        btnStatus = "btn btn-danger btn-sm";
+                                        statusWord = "Pasif Yap";
+                                        btnIcon = "fas fa-times";
+                                        break;
+                                    default:
+                                        <span class="badge badge-danger">&nbsp;Pasif</span>
+                                        btnStatus = "btn btn-success btn-sm";
+                                        statusWord = "Aktif Yap";
+                                        btnIcon = "fas fa-check";
+                                        break;
+                                }
+                            </td>
                             <td class="project-state">
                                 @switch (item.Category.CategoryName)
-                                        {
-                                            case "Dizi":
-                                                color = "badge badge-success";
-                                                break;
-                                            case "Film":
-                                                color = "badge badge-primary";
-                                                break;
-                                            default:
+                                {
+                                    case "Dizi":
+                                        color = "badge badge-success";
+                                        break;
+                                    case "Film":
+                                        color = "badge badge-primary";
+                                        break;
+                                    default:
                                         color = "badge badge-dark";
                                         break;
-                                        }
+                                }
                                 <span class="@color">
                                     @item.Category.CategoryName
                                 </span>
@@ -79,10 +99,10 @@
                                     </i>
                                     Düzenle
                                 </a>
-                                <a class="btn btn-danger btn-sm" href="#">
-                                    <i class="fas fa-trash">
-                                    </i>
-                                    Sil
+                                <a class="@btnStatus" href="/Heading/DeleteHeading/@item.ID">
+                                    <i class="@btnIcon">
+                                    </i>&nbsp;
+                                    @statusWord
                                 </a>
                             </td>
                         </tr>

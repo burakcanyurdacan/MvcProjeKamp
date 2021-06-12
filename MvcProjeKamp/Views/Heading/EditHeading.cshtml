@@ -12,6 +12,17 @@
         @Html.Label("Başlık")
         @Html.TextBoxFor(x => x.HeadingName, new { @class = "form-control disabled" })
         <br />
-        @Html.DropDownListFor(x => x.CategoryId, (SelectList)ViewBag.testlist, new { @class="form-control custom-select" })
+        @Html.Label("Kategori")
+        @Html.DropDownListFor(x => x.CategoryId, (SelectList)ViewBag.testlist, new { @class = "form-control custom-select" })
+        <br /><br />
+        @Html.TextBoxFor(x => x.AddingDate, new { @class = "form-control" })
+        <br />
+        @Html.TextBoxFor(x => x.WriterId, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <button class="btn btn-success">
+            <span class="fas fa-save"></span> Güncelle
+        </button>
+        <a href="/Heading/Index" class="btn btn-secondary"><i class="fas fa-arrow-alt-circle-left"></i> Geri Dön</a>
     </div>
 }
