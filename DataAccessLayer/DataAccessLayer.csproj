@@ -56,6 +56,7 @@
     <Compile Include="Abstract\IContactDAL.cs" />
     <Compile Include="Abstract\IContentDAL.cs" />
     <Compile Include="Abstract\IHeadingDAL.cs" />
+    <Compile Include="Abstract\IMessageDAL.cs" />
     <Compile Include="Abstract\IRepository.cs" />
     <Compile Include="Abstract\IWriterDAL.cs" />
     <Compile Include="Contrete\Context.cs" />
@@ -66,35 +67,8 @@
     <Compile Include="EntityFramework\EfContactDal.cs" />
     <Compile Include="EntityFramework\EfContentDal.cs" />
     <Compile Include="EntityFramework\EfHeadingDal.cs" />
+    <Compile Include="EntityFramework\EfMessageDal.cs" />
     <Compile Include="EntityFramework\EfWriterDal.cs" />
-    <Compile Include="Migrations\202105161922282_test1.cs" />
-    <Compile Include="Migrations\202105161922282_test1.designer.cs">
-      <DependentUpon>202105161922282_test1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105231210100_writerTitleAdd.cs" />
-    <Compile Include="Migrations\202105231210100_writerTitleAdd.designer.cs">
-      <DependentUpon>202105231210100_writerTitleAdd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105241855250_mig_imageSizeChange.cs" />
-    <Compile Include="Migrations\202105241855250_mig_imageSizeChange.designer.cs">
-      <DependentUpon>202105241855250_mig_imageSizeChange.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105241920449_mig_writerStatusAdd.cs" />
-    <Compile Include="Migrations\202105241920449_mig_writerStatusAdd.designer.cs">
-      <DependentUpon>202105241920449_mig_writerStatusAdd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105290637356_mig_HeadingName_lengthUp.cs" />
-    <Compile Include="Migrations\202105290637356_mig_HeadingName_lengthUp.designer.cs">
-      <DependentUpon>202105290637356_mig_HeadingName_lengthUp.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105291316155_mig_addContentStatus.cs" />
-    <Compile Include="Migrations\202105291316155_mig_addContentStatus.designer.cs">
-      <DependentUpon>202105291316155_mig_addContentStatus.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202105291321038_mig_addHeadingStatus.cs" />
-    <Compile Include="Migrations\202105291321038_mig_addHeadingStatus.designer.cs">
-      <DependentUpon>202105291321038_mig_addHeadingStatus.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -107,29 +81,6 @@
       <Project>{73A81ECB-8E0B-4581-A67F-F74F5229ECEA}</Project>
       <Name>EntityLayer</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202105161922282_test1.resx">
-      <DependentUpon>202105161922282_test1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105231210100_writerTitleAdd.resx">
-      <DependentUpon>202105231210100_writerTitleAdd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105241855250_mig_imageSizeChange.resx">
-      <DependentUpon>202105241855250_mig_imageSizeChange.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105241920449_mig_writerStatusAdd.resx">
-      <DependentUpon>202105241920449_mig_writerStatusAdd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105290637356_mig_HeadingName_lengthUp.resx">
-      <DependentUpon>202105290637356_mig_HeadingName_lengthUp.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105291316155_mig_addContentStatus.resx">
-      <DependentUpon>202105291316155_mig_addContentStatus.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202105291321038_mig_addHeadingStatus.resx">
-      <DependentUpon>202105291321038_mig_addHeadingStatus.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
