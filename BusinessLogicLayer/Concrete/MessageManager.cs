@@ -30,7 +30,7 @@ namespace BusinessLogicLayer.Concrete
 
         public Message GetByMessageID(int id)
         {
-            throw new NotImplementedException();
+            return _messageDal.GetByID(x => x.MessageId == id);
         }
 
         public List<Message> GetListInbox()

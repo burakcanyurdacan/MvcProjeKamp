@@ -1,18 +1,16 @@
-﻿@using EntityLayer.Concrete
-@model Contact
+﻿@model EntityLayer.Concrete.Message
 @{
-    ViewBag.Title = "GetContactDetails";
+    ViewBag.Title = "GetSendboxMessageDetails";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>GetContactDetails</h2>
-
+<h2>GetSendboxMessageDetails</h2>
 
 <hr />
 <section class="content">
     <div class="container-fluid">
         <div class="row">
-            @Html.Action("MailMenuPartial","Contact")
+            @Html.Action("MailMenuPartial", "Contact")
             <div class="col-md-9">
                 <div class="card card-primary card-outline">
                     <div class="card-header">
@@ -26,8 +24,8 @@
                         <div class="mailbox-read-info">
                             <h5>@Model.Subject</h5>
                             <h6>
-                                Kimden: @Model.UserMail
-                                <span class="mailbox-read-time float-right">15 Feb. 2015 11:03 PM</span>
+                                Kime: @Model.ReceiverMail
+                                <span class="mailbox-read-time float-right">@(Model.MessageDate.ToString("dd-MMM-yyyy"))</span>
                             </h6>
                         </div>
                         <div class="mailbox-controls with-border text-right">
@@ -48,7 +46,7 @@
                         </div>
                         <div class="mailbox-read-message">
                             <p>
-                                @Model.Message
+                                @Model.MessageContent
                             </p>
                         </div>
                     </div>

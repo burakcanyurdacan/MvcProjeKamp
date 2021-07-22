@@ -12,6 +12,7 @@ namespace MvcProjeKamp.Controllers
     public class ContactController : Controller
     {
         ContactManager com = new ContactManager(new EfContactDal());
+        MessageManager msm = new MessageManager(new EfMessageDal());
         ContactValidator cv = new ContactValidator();
 
         public ActionResult Index()
@@ -28,6 +29,15 @@ namespace MvcProjeKamp.Controllers
 
         public PartialViewResult MailMenuPartial()
         {
+            var iletisim = com.GetContactList().Count();
+            ViewBag.iletisim = iletisim;
+
+            var gelenKutusu = msm.GetListInbox().Count();
+            ViewBag.gelenKutusu = gelenKutusu;
+
+            var gonderilmis = msm.GetListSendbox().Count();
+            ViewBag.gonderilmis = gonderilmis;
+
             return PartialView();
         }
     }

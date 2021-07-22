@@ -15,18 +15,19 @@
                 <li class="nav-item active">
                     <a href="/Contact/Index" class="nav-link">
                         <i class="fas fa-mail-bulk"></i> İletişim
-                        <span class="badge bg-primary float-right">0</span>
+                        <span class="badge bg-primary float-right">@ViewBag.iletisim</span>
                     </a>
                 </li>
                 <li class="nav-item active">
                     <a href="/Message/Inbox/" class="nav-link">
                         <i class="fas fa-inbox"></i> Gelen Kutusu
-                        <span class="badge bg-primary float-right">2</span>
+                        <span class="badge bg-primary float-right">@ViewBag.gelenKutusu</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a href="/Message/Sendbox/" class="nav-link">
                         <i class="far fa-envelope"></i> Gönderilmiş
+                        <span class="badge bg-primary float-right">@ViewBag.gonderilmis</span>
                     </a>
                 </li>
                 <li class="nav-item">
