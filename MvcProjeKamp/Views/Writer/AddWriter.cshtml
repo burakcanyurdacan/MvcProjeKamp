@@ -6,7 +6,7 @@
 
 <h2>Yeni Yazar Ekle</h2>
 <hr />
-@using (Html.BeginForm())
+@using (Html.BeginForm("AddWriter","Writer",FormMethod.Post))
 {
     <div class="form-group">
         @Html.Label("Yazar Adı")
