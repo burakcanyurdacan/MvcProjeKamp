@@ -4,8 +4,8 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Index</h2>
-
+<h2>Galeri</h2>
+<hr />
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,34 +26,12 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
 <body class="hold-transition sidebar-mini">
-
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-        <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-sm-6">
-                    <h1>Sözlük Galerisi</h1>
-                </div>
-                <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Gallery</li>
-                    </ol>
-                </div>
-            </div>
-        </div><!-- /.container-fluid -->
-    </section>
     <!-- Main content -->
     <section class="content">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
                     <div class="card card-primary">
-                        <div class="card-header">
-                            <div class="card-title">
-                                Ekko Lightbox
-                            </div>
-                        </div>
                         <div class="card-body">
                             <div class="row">
                                 @foreach (var item in Model)
@@ -118,5 +96,3 @@
         })</script>
 </body>
 </html>
-
-

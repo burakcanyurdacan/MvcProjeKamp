@@ -309,7 +309,16 @@
     <Content Include="AdminLTE-3.0.4\docs\_layouts\post.html" />
     <Content Include="AdminLTE-3.0.4\images\100.jpg" />
     <Content Include="AdminLTE-3.0.4\images\101.jpg" />
-    <Content Include="AdminLTE-3.0.4\images\wp17.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\102.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\103.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\104.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\105.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\106.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\107.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\108.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\109.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\110.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\111.jpg" />
     <Content Include="AdminLTE-3.0.4\index.html" />
     <Content Include="AdminLTE-3.0.4\index2.html" />
     <Content Include="AdminLTE-3.0.4\index3.html" />

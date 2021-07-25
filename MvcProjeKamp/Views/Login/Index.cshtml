@@ -25,14 +25,15 @@
 </head>
 <body class="hold-transition login-page">
     <div class="login-box">
-            <div class="login-logo text-center mb-4">
-                <h4>Mvc Proje Kampı Admin Girişi</h4>
-            </div>
+        <div class="login-logo text-center mb-4">
+            <h4>Mvc Proje Kampı Admin Girişi</h4>
+        </div>
         <div class="card">
             <div class="card-body login-card-body rounded-lg">
-                <form>
+                @using (Html.BeginForm())
+                {
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Kullanıcı Adı">
+                        <input type="text" name="AdminUsername" class="form-control" placeholder="Kullanıcı Adı">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-user"></span>
@@ -40,7 +41,7 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="password" class="form-control" placeholder="Parola">
+                        <input type="password" name="AdminPassword" class="form-control" placeholder="Parola">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-lock"></span>
@@ -57,7 +58,7 @@
                         </div>
                         <!-- /.col -->
                     </div>
-                </form>
+                }
 
                 <div class=" text-center mt-3">
                     <hr />
