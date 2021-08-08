@@ -38,6 +38,9 @@ namespace MvcProjeKamp.Controllers
             var gonderilmis = msm.GetListSendbox().Count();
             ViewBag.gonderilmis = gonderilmis;
 
+            var okunmamislar = msm.GetListInbox().Where(x => x.IsRead == false).Count();
+            ViewBag.okunmamis = okunmamislar;
+
             return PartialView();
         }
     }

@@ -2,6 +2,7 @@
 @{
     ViewBag.Title = "Inbox";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    string iconClass = "", btnTitle="";
 }
 
 <h2>Gelen Kutusu</h2>
@@ -63,10 +64,28 @@
                                                 <label for="check1"></label>
                                             </div>
                                         </td>
+                                        <td>
+                                            @switch (item.IsRead)
+                                            {
+                                                case true:
+                                                    iconClass = "far fa-envelope-open";
+                                                    btnTitle = "Okunmadı Olarak İşaretle";
+                                                    break;
+                                                default:
+                                                    iconClass = "fas fa-envelope";
+                                                    btnTitle = "Okundu Olarak İşaretle";
+                                                    break;
+                                            }
+                                            <a href="/Message/ReadUnread/@item.MessageId" class="btn-link" title="@btnTitle">
+                                                <span class="@iconClass"></span>
+                                            </a>
+                                        </td>
                                         <td class="mailbox-star"><a href="#"><i class="fas fa-star text-warning"></i></a></td>
                                         <td class="mailbox-name"><a href="/Message/GetInboxMessageDetails/@item.MessageId">@item.SenderMail</a></td>
                                         <td class="mailbox-subject">
-                                            <b>@item.Subject</b> - @item.MessageContent.Substring(0, 10)...
+                                            <div class="row">
+                                                <b>@item.Subject</b> - @Html.Raw(item.MessageContent.Substring(0, 10))...
+                                            </div>
                                         </td>
                                         <td class="mailbox-attachment"></td>
                                         <td class="mailbox-date">@(item.MessageDate.ToString("dd-MMM-yyyy"))</td>

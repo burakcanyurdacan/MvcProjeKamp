@@ -26,12 +26,10 @@
 
     <h2>Yeni Mesaj Oluştur</h2>
     <hr />
-    <!-- Main content -->
     <section class="content">
         <div class="container-fluid">
             <div class="row">
                 @Html.Action("MailMenuPartial", "Contact")
-                <!-- /.col -->
                 <div class="col-md-9">
                     @using (Html.BeginForm())
                     {
@@ -39,7 +37,6 @@
                             <div class="card-header">
                                 <h3 class="card-title">Yeni Mesaj</h3>
                             </div>
-                            <!-- /.card-header -->
                             <div class="card-body">
                                 <div class="form-group">
                                     @Html.TextBoxFor(x => x.ReceiverMail, new { @class = "form-control", @placeholder = "Alıcı :" })
@@ -58,26 +55,20 @@
                                         <i class="fas fa-paperclip"></i> Dosya Ekle
                                         <input type="file" name="attachment">
                                     </div>
-                                    <p class="help-block">Max. 32MB</p>
                                 </div>
                             </div>
-                            <!-- /.card-body -->
                             <div class="card-footer">
                                 <div class="float-right">
                                     <button type="button" class="btn btn-default">Taslağa Kaydet</button>
                                     <button type="submit" class="btn btn-primary">Gönder</button>
                                 </div>
-                                <button type="reset" class="btn btn-default">İptal Et</button>
+                                <a href="/Message/Inbox/" class="btn btn-default">İptal Et</a>
                             </div>
-                            <!-- /.card-footer -->
                         </div>
                     }
-                    <!-- /.card -->
                 </div>
-                <!-- /.col -->
             </div>
-            <!-- /.row -->
-        </div><!-- /.container-fluid -->
+        </div>
     </section>
     <!-- /.content -->
     <!-- /.content-wrapper -->

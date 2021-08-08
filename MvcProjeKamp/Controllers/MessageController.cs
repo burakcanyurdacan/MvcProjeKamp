@@ -52,9 +52,17 @@ namespace MvcProjeKamp.Controllers
             return View();
         }
 
+        [HttpPost]
+        public ActionResult DraftMessage(Message p)
+        {
+            return View();
+        }
+
         public ActionResult GetInboxMessageDetails(int id)
         {
             var values = mm.GetByMessageID(id);
+            values.IsRead = true;
+            mm.UpdateMessage(values);
             return View(values);
         }
 
@@ -62,6 +70,22 @@ namespace MvcProjeKamp.Controllers
         {
             var values = mm.GetByMessageID(id);
             return View(values);
+        }
+
+        public ActionResult ReadUnread(int id)
+        {
+            Message mes = mm.GetByMessageID(id); 
+            if (!mes.IsRead)
+            {
+                mes.IsRead = true;
+                mm.UpdateMessage(mes);
+            }
+            else
+            {
+                mes.IsRead = false;
+                mm.UpdateMessage(mes);
+            }
+            return RedirectToAction("Inbox");
         }
     }
 }
