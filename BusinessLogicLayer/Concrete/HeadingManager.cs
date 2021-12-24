@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace BusinessLogicLayer.Concrete
 {
@@ -44,6 +45,11 @@ namespace BusinessLogicLayer.Concrete
         public List<Heading> GetHeadingList()
         {
             return _headingDal.List();
+        }
+
+        public List<Heading> GetHeadingListByWriter(int id)
+        {
+            return _headingDal.List(x => x.WriterId == id);
         }
 
         public void UpdateHeading(Heading p)
